@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link, Routes, useParams } from "react-router-dom";
 import "./App.css";
+import TradingViewWidget from './TradingViewWidget';
 
 function App() {
   return (
@@ -121,8 +122,8 @@ function Trends() {
       <div className="search-bar">
         <input type="text" placeholder="Search..." />
       </div>
-      <div className="chart">
-        <img src="https://via.placeholder.com/600x300" alt="Chart" />
+      <div className="chart" style={{ height: '600px', width: '100%' }}>
+        <TradingViewWidget />
       </div>
       <table className="crypto-table">
         <thead>
